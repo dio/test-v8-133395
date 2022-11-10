@@ -16,5 +16,7 @@ jobs:
           - macos-11
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: TestVm.WasmMemoryLimit 100 times
         run: ./test.sh
