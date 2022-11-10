@@ -12,10 +12,15 @@ jobs:
       fail-fast: false
       matrix:
         os:
+          - ubuntu-22.04
           - macos-12
           - macos-11
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Cancel when duplicated
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
       - name: TestVm.WasmMemoryLimit 100 times

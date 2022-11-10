@@ -31,6 +31,7 @@ done
 # external/v8/src/base/platform/platform-darwin.cc:56:22: error: 'getsectdatafromheader_64' is
 # deprecated: first deprecated in macOS 13.0 [-Werror,-Wdeprecated-declarations].
 bazel test \
+  --config=clang \
   --cxxopt=-Wno-deprecated-declarations \
   --host_cxxopt=-Wno-deprecated-declarations \
   --verbose_failures \
