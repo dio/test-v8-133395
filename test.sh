@@ -39,4 +39,5 @@ bazel test \
   --define engine=v8 \
   --test_arg=--gtest_filter=TestVm.WasmMemoryLimit \
   --test_arg=--gtest_repeat=100 \
+  --runs_per_test=100 \
   //test:runtime_test
