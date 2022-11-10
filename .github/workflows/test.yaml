@@ -15,6 +15,6 @@ jobs:
         - macos-12
         - macos-11
     runs-on: ${{ matrix.os }}
-  steps:
-    - name: TestVm.WasmMemoryLimit 100 times
-      run: ./test.sh
+    steps:
+      - name: TestVm.WasmMemoryLimit 100 times
+        run: ./test.sh
